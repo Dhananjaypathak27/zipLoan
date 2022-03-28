@@ -13,6 +13,8 @@ class OtpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+      ),
       backgroundColor: AppColors.orangeBg,
       body: Body(),
     );

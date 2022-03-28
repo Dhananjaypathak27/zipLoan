@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ziploan/constants/keys.dart';
 import 'package:ziploan/themes.dart';
 
 import '../../../components/custom_button.dart';
@@ -14,14 +15,14 @@ class MobileCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20.0), topRight: Radius.circular(20)),
       ),
       elevation: 5,
       color: Colors.white,
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+        margin: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
@@ -41,8 +42,8 @@ class MobileCard extends StatelessWidget {
                         borderSide: BorderSide(width: 1.0),
                       ),
                       counter: Offstage(),
-                      hintText: "Mobile Number",
-                      labelText: "Mobile Number",
+                      hintText: kMobileNumber,
+                      labelText: kMobileNumber,
                       enabledBorder: const OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.red, width: 5.0),
                       ),
@@ -58,15 +59,15 @@ class MobileCard extends StatelessWidget {
               height: 20,
             ),
             const Text(
-              "OTP will be sent to this number for verification",
+              kOtpWillBeSent,
               style: Themes.blackTextNormal,
             ),
             Obx(() => Flexible(
-              fit: FlexFit.loose,
-              child: CheckboxListTile(
+                  fit: FlexFit.loose,
+                  child: CheckboxListTile(
                       contentPadding: EdgeInsets.zero,
                       title: const Text(
-                        "By clicking on the continue button,I accept the terms and conditons",
+                        kByClickingOn,
                         style: Themes.blackTextNormal,
                       ),
                       controlAffinity: ListTileControlAffinity.leading,
@@ -75,10 +76,10 @@ class MobileCard extends StatelessWidget {
                         zipLoanController.updateCheckBoxState(b);
                       }),
                 )),
-             CustomButton(
-                    text: "Continue",
-                    press: continueBtnClicked,
-                  ),
+            CustomButton(
+              text: kContinueTxt,
+              press: continueBtnClicked,
+            ),
           ],
         ),
       ),

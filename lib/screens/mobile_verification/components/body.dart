@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ziploan/constants/color_constants.dart';
+import 'package:ziploan/constants/keys.dart';
 import 'package:ziploan/screens/mobile_verification/components/mobile_card.dart';
 import 'package:ziploan/themes.dart';
 
@@ -12,14 +12,13 @@ class Body extends StatelessWidget {
       child: SafeArea(
         child: Container(
           height: MediaQuery.of(context).size.height,
-
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 16),
+                margin: const EdgeInsets.symmetric(horizontal: 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -27,9 +26,9 @@ class Body extends StatelessWidget {
                     const SizedBox(
                       height: 50,
                     ),
-                    const Text("Welcome to ZipLoan",style: Themes.whiteTextBold,),
+                    const Text(kWelcomeToZipLoan,style: Themes.whiteTextBold,),
                     const SizedBox(height: 20,),
-                    const Text("Sing up / Log in to apply for line of credit",style: Themes.whiteTextNormal,),
+                    const Text(kSignUpLoginToApply,style: Themes.whiteTextNormal,),
                     const SizedBox(height: 20,),
                   ],
                 ),

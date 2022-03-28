@@ -1,1 +1,14 @@
-const app_title = "ZipLoan";
+const kAppTitle = "ZipLoan";
+const kContinueTxt ="Continue";
+const kPinIsInCorrect = 'Pin is incorrect';
+const kCongratulation = 'Congratulation!!';
+const kOtpVerified = 'OTP verified Successfully!!';
+const kAttention = 'Attention!!';
+const kPleaseAccept = 'Please Accept Our terms and Conditions';
+const kPleaseEnterMobileNumber = 'please enter mobile number';
+const kPleaseEnterValidMobile = 'please enter a valid mobile number';
+const kWelcomeToZipLoan = 'Welcome to ZipLoan';
+const kSignUpLoginToApply = 'Sing up / Log in to apply for line of credit';
+const kMobileNumber = 'Mobile Number';
+const kOtpWillBeSent = 'OTP will be sent to this number for verification';
+const kByClickingOn = "By clicking on the continue button,I accept the terms and conditions";

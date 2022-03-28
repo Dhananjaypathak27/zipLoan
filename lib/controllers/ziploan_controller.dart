@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:pinput/pinput.dart';
+import 'package:ziploan/constants/keys.dart';
 import 'package:ziploan/screens/mobile_verification/mobile_verification_screen.dart';
 import 'package:ziploan/screens/otp_verification/otp_screen.dart';
 
@@ -28,7 +28,7 @@ class ZipLoanController extends GetxController {
   numberErrorText(String number) {
     numberError(null);
     if (number.isEmpty || number == "") {
-      numberError("please enter mobile number");
+      numberError(kPleaseEnterMobileNumber);
     }  else if (number[0] == "1" ||
         number[0] == "2" ||
         number[0] == "3" ||
@@ -36,10 +36,10 @@ class ZipLoanController extends GetxController {
         number[0] == "5" ||
         number[0] == "6" ||
         number[0] == "0") {
-      numberError("please enter a valid mobile number");
+      numberError(kPleaseEnterValidMobile);
     }
     else if (number.length <10) {
-      numberError("please enter a valid mobile number");
+      numberError(kPleaseEnterValidMobile);
     }
     else {
       numberError("");
@@ -47,7 +47,7 @@ class ZipLoanController extends GetxController {
   }
   
   successMessage(){
-    Get.snackbar("Congratulation!!", "OTP verified Successfully!!",snackPosition: SnackPosition.BOTTOM);
+    Get.snackbar(kCongratulation, kOtpVerified,snackPosition: SnackPosition.BOTTOM);
   }
 
   bool enableDisableContinueMobileBtn(){
@@ -62,7 +62,7 @@ class ZipLoanController extends GetxController {
       Get.to(OtpScreen());
     }
     else{
-      Get.snackbar("Attention!!", "Please Accept Our terms and Conditions",
+      Get.snackbar(kAttention,kPleaseAccept,
           snackPosition: SnackPosition.BOTTOM);
     }
 

@@ -10,7 +10,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: SafeArea(
-        child: Container(
+        child: SizedBox(
           height: MediaQuery.of(context).size.height,
 
           child: Column(
@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 16),
+                margin: const EdgeInsets.symmetric(horizontal: 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

@@ -19,17 +19,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: app_title,
+      title: kAppTitle,
       initialBinding: ZiploanBinding(),
       theme: Themes.lightTheme,
       darkTheme: Themes.darkTheme,
       home: SplashScreen(),
-      getPages: [
-        GetPage(
-          name: '/',
-          page: () => SplashScreen(),
-        ),
-      ],
     );
   }
 }
